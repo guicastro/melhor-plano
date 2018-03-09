@@ -7,9 +7,29 @@ namespace Composer\Autoload;
 class ComposerStaticInite6fc52cdfe98e50edffe8671f9feef0e
 {
     public static $prefixLengthsPsr4 = array (
+        'V' => 
+        array (
+            'Views\\' => 6,
+        ),
+        'R' => 
+        array (
+            'Routes\\' => 7,
+        ),
+        'M' => 
+        array (
+            'Models\\' => 7,
+        ),
+        'I' => 
+        array (
+            'Init\\' => 5,
+        ),
+        'F' => 
+        array (
+            'Functions\\' => 10,
+        ),
         'C' => 
         array (
-            'Classes\\' => 8,
+            'Controllers\\' => 12,
         ),
         'A' => 
         array (
@@ -18,9 +38,29 @@ class ComposerStaticInite6fc52cdfe98e50edffe8671f9feef0e
     );
 
     public static $prefixDirsPsr4 = array (
-        'Classes\\' => 
+        'Views\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/Classes',
+            0 => __DIR__ . '/../..' . '/src/Classes/Views',
+        ),
+        'Routes\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Classes/Route',
+        ),
+        'Models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Classes/Models',
+        ),
+        'Init\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Classes/Init',
+        ),
+        'Functions\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Functions',
+        ),
+        'Controllers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Classes/Controllers',
         ),
         'Api\\' => 
         array (

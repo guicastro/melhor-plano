@@ -11,8 +11,13 @@
 	],
 	"autoload":{
 		"psr-4":{
-			"Classes\\":"src/Classes/",
-			"Api\\":"api/"
+			"Controllers\\":"src/Classes/Controllers",
+			"Models\\":"src/Classes/Models",
+			"Views\\":"src/Classes/Views",
+			"Init\\":"src/Classes/Init",
+			"Routes\\":"src/Classes/Route",
+			"Functions\\":"src/Functions",
+			"Api\\":"api"
 		}
 	}
 }

@@ -11,13 +11,34 @@
     <title>TESTE DE API RESTFUL</title>
   </head>
   <body>
-    <h1>TESTE DE API RESTFUL</h1>
-    <button class="btn-enviar" data-id="GET">GET</button>
-    <button class="btn-enviar" data-id="PUT">PUT</button>
-    <button class="btn-enviar" data-id="DELETE">DELETE</button>
-    <button class="btn-enviar" data-id="POST">POST</button>
-    <button class="btn-enviar" data-id="OPTIONS">OPTIONS</button>
 
+    <div class="container-fluid">
+      <h1>TESTE DE API RESTFUL</h1>
+      <form  name="form-api" id="form-api">
+        <div class="col-xs-6">
+          <label class="label" for="nome">Nome: </label>
+          <input type="text" name="nome" id="nome">
+        </div>
+        <div class="col-xs-6">
+          <label class="label" for="cargo">Cargo: </label>
+          <input type="text" name="cargo" id="cargo">
+        </div>
+        <div class="col-xs-6">
+          <label class="label" for="arquivo">Arquivo: </label>
+          <input type="file" name="arquivo" id="arquivo">
+        </div>
+        <p></p>
+        <div class="col-xs-6">
+          <button type="button" class="btn-enviar" data-id="GET">GET</button>
+          <button type="button" class="btn-enviar" data-id="PUT">PUT</button>
+          <button type="button" class="btn-enviar" data-id="PUT">PUT-VECTOR</button>
+          <button type="button" class="btn-enviar" data-id="DELETE">DELETE</button>
+          <button type="button" class="btn-enviar" data-id="POST">POST</button>
+          <button type="button" class="btn-enviar" data-id="OPTIONS">OPTIONS</button>
+        </div>
+      </form>
+    </div>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -29,10 +50,30 @@
 
         var method = $(this).data("id");
 
+        var button = $(this).text();
+
+        if(button=='PUT-VECTOR') {
+
+          var formData = {
+            nome: $("#nome").val(),
+            cargo: $("#cargo").val(),
+          };
+        }
+        else {
+
+          var formData = new FormData($("#form-api")[0]);
+          formData.append('button',button);          
+        }
+
+
         $.ajax({
             type: method,
             dataType: "json",
             url: '../api/list-all-broadbands',
+            data: formData,
+            contentType: false,
+            enctype: 'multipart/form-data',
+            processData: false,
             success: function(data, textStatus, jqXHR) {
 
               console.log("OK");

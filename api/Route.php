@@ -2,15 +2,15 @@
 
 namespace Api;
 
-use Classes\Bootstrap;
+use \Init\Bootstrap;
 
 class Route extends Bootstrap {
 
 	protected function initRoutes() {
 
-		$routes['list-all-boradbands'] = array("route" => "/",
-								                "controller" => "indexController",
-								                "action" => "index");
+		$routes['api/list-all-broadbands'] = array("controller" => "broadband",
+													"action" => "ListAll",
+								                	"view" => "json");
 
 		$this->setRoutes($routes);
 	}
