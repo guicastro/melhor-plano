@@ -3,6 +3,7 @@
 namespace Models;
 
 use \Functions;
+use \Services;
 
 class BroadbandModel {
 
@@ -16,6 +17,7 @@ class BroadbandModel {
         $this->setMethod($method);
         $this->setArgs($args);
         $this->setData();
+        $this->setDatabase();
     }
 
     protected function setMethod($method) {
@@ -28,15 +30,17 @@ class BroadbandModel {
         $this->Args = $args;
     }
 
-    protected function setDatabase($database) {
-
-        $this->Database = $database;
-    }
-
     protected function setData() {
 
         $ParseData = new Functions\ParseData($this->Method);
         $this->Data = $ParseData->parseData();
+    }
+
+    protected function setDatabase() {
+
+        $Database = new \Services\Database;
+        $Database->render();
+        $this->Database = $Database;
     }
 
     public function ListAll() {

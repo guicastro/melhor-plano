@@ -5,8 +5,6 @@
 
     require_once("../config/config.php");
 
-    require_once("../config/database.php");
-
     require_once("../vendor/autoload.php");
 
     // $result["server"] = print_r($_SERVER, true);

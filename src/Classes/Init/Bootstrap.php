@@ -7,7 +7,6 @@ use \Controllers;
 abstract class Bootstrap
 {
     protected $Routes;
-    protected $Dtabase;
 
     public function __construct() {
 
@@ -40,11 +39,6 @@ abstract class Bootstrap
     protected function setRoutes(array $routes) {
 
         $this->Routes = $routes;
-    }
-
-    protected function setDatabase($database) {
-
-        $this->Database = $database;
     }
 
     protected function getUrl() {

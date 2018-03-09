@@ -16,6 +16,7 @@
 			"Views\\":"src/Classes/Views",
 			"Init\\":"src/Classes/Init",
 			"Routes\\":"src/Classes/Route",
+			"Services\\":"src/Classes/Services",
 			"Functions\\":"src/Functions",
 			"Api\\":"api"
 		}
