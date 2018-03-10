@@ -45,7 +45,6 @@ class BroadbandController
         $Action = $this->Action;
         $this->Model = new $Model($this->Method, $this->Args);
         $RunAction = $this->Model->$Action();
-        print_r($this->Model);
                    
         $ViewName = "\\Views\\".$this->View;;
         $View = new $ViewName($RunAction['success'], $RunAction['render'], $RunAction['error']);

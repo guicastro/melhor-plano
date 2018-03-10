@@ -42,7 +42,7 @@ class Json
         if($this->Success==true) {
 
             $render["success"] = true;
-            $render["payload"] = $this->Render;
+            $render["data"] = $this->Render;
             echo json_encode($render);
         }
         else {

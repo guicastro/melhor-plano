@@ -11,6 +11,10 @@ class ComposerStaticInite6fc52cdfe98e50edffe8671f9feef0e
         array (
             'Views\\' => 6,
         ),
+        'S' => 
+        array (
+            'Services\\' => 9,
+        ),
         'R' => 
         array (
             'Routes\\' => 7,
@@ -41,6 +45,10 @@ class ComposerStaticInite6fc52cdfe98e50edffe8671f9feef0e
         'Views\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/Classes/Views',
+        ),
+        'Services\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Classes/Services',
         ),
         'Routes\\' => 
         array (

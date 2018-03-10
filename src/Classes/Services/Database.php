@@ -6,12 +6,12 @@ class Database {
 
     protected $Database;
 
-    public function __construct($database) {
+    public function __construct() {
 
-        $this->setDatabase($database);
+        $this->setDatabase();
     }
 
-    protected function setDatabase($database) {
+    protected function setDatabase() {
 
         $database["products"][12]["type"] = "bb";
         $database["products"][12]["name"] = "Broadband1";
