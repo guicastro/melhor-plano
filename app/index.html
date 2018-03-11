@@ -10,13 +10,39 @@
     <link rel="stylesheet" href="../lib/bootstrap-4.0.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
 
-    <title>Hello, world!</title>
+    <title>Melhor Plano</title>
   </head>
   <body>
     <header>
       <img src="../images/logo.png" />
     </header>
     <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 text-center"><h2>Broadband plans</h2></div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div id="standalone"></div>
+          <div class="col-3">
+            <div class="card">
+              <div class="card-header">Broadband 2</div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">UP 5 MBs (limit 100GB per month)</li>
+                <li class="list-group-item">$ 120</li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="btn btn-primary">View bundles</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12"><p></p>Please, click in any broadband to show our bundles.</p></div>
+      </div>
+      <div class="row">
+        <div class="col-12"><div id="bundles"></div>
+      </div>
     </div>
 
     <!-- Optional JavaScript -->
@@ -24,5 +50,11 @@
     <script src="../assets/js/jquery-3.3.1.min.js"></script>
     <script src="../assets/js/popper.min.js"></script>
     <script src="../lib/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    <script type="text/javascript">
+    
+      ReturnApiData('list-all-broadbands');
+
+    </script>
   </body>
 </html>

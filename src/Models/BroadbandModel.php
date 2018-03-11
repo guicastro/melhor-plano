@@ -48,25 +48,29 @@ class BroadbandModel {
         
         foreach($Database->products as $key => $ProductObject) {
 
-            $Products[$ProductObject->id] = $ProductObject;
-        }
-        
-        $Bundles = $Database->bundles;
-        
-        foreach($Bundles as $keyBundle => $BundleObject) {
-            
-            $Bundles[$keyBundle]->mainProduct = $Products[$BundleObject->mainProduct];
-            foreach($BundleObject->products as $keyProducts => $BundleProductObject) {
-                
-                $BundleProductObject->product = $Products[$BundleProductObject->product];
-                $NewBundleProducts[] = $BundleProductObject;
-
-                $Bundles[$keyBundle]->product = $NewBundleProducts;
+            $AllProducts[$ProductObject->id] = $ProductObject;
+            if($ProductObject->type=="bb") { 
+                $Broadbands[] = $ProductObject;
             }
         }
 
+        $AllBundles = $Database->bundles;
         
-        if( count($Database->products)>0 || count($Bundles)>0 ) {
+        foreach($AllBundles as $keyBundle => $BundleObject) {
+
+            if($AllProducts[$BundleObject->mainProduct]->type == "bb") {
+                
+                $BundleMainProduct[$keyBundle] = $AllProducts[$BundleObject->mainProduct];
+                foreach($BundleObject->products as $keyProducts => $BundleProductObject) {
+                    
+                    $NewBundleProducts[] = array("product" => $AllProducts[$BundleProductObject->product], "additional" => $BundleProductObject->additional);                    
+                }
+                $BundleProducts[$keyBundle] = $NewBundleProducts;
+                $Bundles[] = array("mainProduct" => $BundleMainProduct[$keyBundle], "products" => $BundleProducts[$keyBundle]);
+            }
+        }
+
+        if( count($Broadbands)>0 || count($Bundles)>0 ) {
 
             $return["success"] = true;
         }
@@ -79,12 +83,10 @@ class BroadbandModel {
             $return["error"]["userMessage"] = "Não há dados para a pesquisa informada";
         }
 
-
-        $return["render"]["products"] = $Database->products;
+        $return["render"]["products"] = $Broadbands;
         $return["render"]["bundles"] = $Bundles;
 
         return $return;
     }
     
-
 }

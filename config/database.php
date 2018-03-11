@@ -19,30 +19,30 @@
     
     $database["addons"][] = array("type" => "bb", "id" => 21);
     
-    $database["bundles"][] = array("mainProduct" => 16, "products" => array(array("product" => 18, "tax" => -10),
-                                                                                    array("product" => 8, "tax" => -40),
-                                                                                    array("product" => 10, "tax" => -20),
-                                                                                    array("product" => 21, "tax" => -10)
+    $database["bundles"][] = array("mainProduct" => 16, "products" => array(array("product" => 18, "additional" => -10),
+                                                                                    array("product" => 8, "additional" => -40),
+                                                                                    array("product" => 10, "additional" => -20),
+                                                                                    array("product" => 21, "additional" => -10)
                                                                                 ));
     
-    $database["bundles"][] = array("mainProduct" => 18, "products" => array(array("product" => 14, "tax" => 35),
-                                                                                    array("product" => 8, "tax" => -10),
-                                                                                    array("product" => 16, "tax" => -10)
+    $database["bundles"][] = array("mainProduct" => 18, "products" => array(array("product" => 14, "additional" => 35),
+                                                                                    array("product" => 8, "additional" => -10),
+                                                                                    array("product" => 16, "additional" => -10)
                                                                                 ));
     
-    $database["bundles"][] = array("mainProduct" => 12, "products" => array(array("product" => 8, "tax" => -40),
-                                                                                    array("product" => 21, "tax" => 0)
+    $database["bundles"][] = array("mainProduct" => 12, "products" => array(array("product" => 8, "additional" => -40),
+                                                                                    array("product" => 21, "additional" => 0)
                                                                                 ));    
     
-    $database["bundles"][] = array("mainProduct" => 8, "products" => array(array("product" => 12, "tax" => -40),
-                                                                                    array("product" => 10, "tax" => -30),
-                                                                                    array("product" => 16, "tax" => -40),
-                                                                                    array("product" => 18, "tax" => -10)
+    $database["bundles"][] = array("mainProduct" => 8, "products" => array(array("product" => 12, "additional" => -40),
+                                                                                    array("product" => 10, "additional" => -30),
+                                                                                    array("product" => 16, "additional" => -40),
+                                                                                    array("product" => 18, "additional" => -10)
                                                                                 ));
     
-    $database["bundles"][] = array("mainProduct" => 10, "products" => array(array("product" => 8, "tax" => -30),
-                                                                                    array("product" => 16, "tax" => -20),
-                                                                                    array("product" => 14, "tax" => 15)
+    $database["bundles"][] = array("mainProduct" => 10, "products" => array(array("product" => 8, "additional" => -30),
+                                                                                    array("product" => 16, "additional" => -20),
+                                                                                    array("product" => 14, "additional" => 15)
                                                                                 ));
   
     echo json_encode($database);
