@@ -35,32 +35,28 @@ class ComposerStaticInite6fc52cdfe98e50edffe8671f9feef0e
         array (
             'Controllers\\' => 12,
         ),
-        'A' => 
-        array (
-            'Api\\' => 4,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Views\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/Classes/Views',
+            0 => __DIR__ . '/../..' . '/src/Views',
         ),
         'Services\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/Classes/Services',
+            0 => __DIR__ . '/../..' . '/src/Services',
         ),
         'Routes\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/Classes/Route',
+            0 => __DIR__ . '/../..' . '/src/Routes',
         ),
         'Models\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/Classes/Models',
+            0 => __DIR__ . '/../..' . '/src/Models',
         ),
         'Init\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/Classes/Init',
+            0 => __DIR__ . '/../..' . '/src/Init',
         ),
         'Functions\\' => 
         array (
@@ -68,11 +64,7 @@ class ComposerStaticInite6fc52cdfe98e50edffe8671f9feef0e
         ),
         'Controllers\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/Classes/Controllers',
-        ),
-        'Api\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/api',
+            0 => __DIR__ . '/../..' . '/src/Controllers',
         ),
     );
 

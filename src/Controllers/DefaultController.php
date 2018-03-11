@@ -2,21 +2,28 @@
 
 namespace Controllers;
 
-class BroadbandController
+class DefaultController
 {
     protected $Action;
+    protected $ModelName;
     protected $Model;
     protected $View;
     protected $Method;
     protected $Args;
 
-    public function __construct($action, $view, $method, $args) {
+    public function __construct($model, $action, $view, $method, $args) {
 
+        $this->setModel($model);
         $this->setAction($action);
         $this->setMethod($method);
         $this->setView($view);
         $this->setArgs($args);
         $this->runController();
+    }
+
+    protected function setModel($model) {
+
+        $this->ModelName = $model;
     }
 
     protected function setAction($action) {
@@ -41,7 +48,7 @@ class BroadbandController
 
     protected function runController() {
         
-        $Model = "\\Models\\BroadbandModel";
+        $Model = "\\Models\\".$this->ModelName."Model";
         $Action = $this->Action;
         $this->Model = new $Model($this->Method, $this->Args);
         $RunAction = $this->Model->$Action();

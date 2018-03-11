@@ -1,0 +1,12 @@
+header {
+    margin-bottom: 0;
+    background: linear-gradient(20deg, #18ccc0, #80deea);
+    box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, .3);
+    border: 0;
+    text-align: center;
+}
+
+header img {
+
+    margin: 6px;
+}

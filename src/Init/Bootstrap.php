@@ -29,9 +29,10 @@ abstract class Bootstrap
                 $class = "\Controllers\\".ucfirst($routeConfig['controller'])."Controller";
                 $method = $_SERVER['REQUEST_METHOD'];
                 $action = $routeConfig['action'];
+                $model = ucfirst($routeConfig['model']);
                 $view = $routeConfig['view'];
                 $args = array_slice($splitArgs, 2);
-                $controller = new $class($action, $view, $method, $args);
+                $controller = new $class($model, $action, $view, $method, $args);
             }
         });
     }

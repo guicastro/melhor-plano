@@ -11,14 +11,13 @@
 	],
 	"autoload":{
 		"psr-4":{
-			"Controllers\\":"src/Classes/Controllers",
-			"Models\\":"src/Classes/Models",
-			"Views\\":"src/Classes/Views",
-			"Init\\":"src/Classes/Init",
-			"Routes\\":"src/Classes/Route",
-			"Services\\":"src/Classes/Services",
-			"Functions\\":"src/Functions",
-			"Api\\":"api"
+			"Init\\":"src/Init",
+			"Routes\\":"src/Routes",
+			"Controllers\\":"src/Controllers",
+			"Models\\":"src/Models",
+			"Views\\":"src/Views",
+			"Services\\":"src/Services",
+			"Functions\\":"src/Functions"
 		}
 	}
 }

@@ -6,12 +6,11 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Views\\' => array($baseDir . '/src/Classes/Views'),
-    'Services\\' => array($baseDir . '/src/Classes/Services'),
-    'Routes\\' => array($baseDir . '/src/Classes/Route'),
-    'Models\\' => array($baseDir . '/src/Classes/Models'),
-    'Init\\' => array($baseDir . '/src/Classes/Init'),
+    'Views\\' => array($baseDir . '/src/Views'),
+    'Services\\' => array($baseDir . '/src/Services'),
+    'Routes\\' => array($baseDir . '/src/Routes'),
+    'Models\\' => array($baseDir . '/src/Models'),
+    'Init\\' => array($baseDir . '/src/Init'),
     'Functions\\' => array($baseDir . '/src/Functions'),
-    'Controllers\\' => array($baseDir . '/src/Classes/Controllers'),
-    'Api\\' => array($baseDir . '/api'),
+    'Controllers\\' => array($baseDir . '/src/Controllers'),
 );
