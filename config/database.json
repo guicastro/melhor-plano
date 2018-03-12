@@ -1,74 +1,147 @@
 {
-    "products": {
-        "8": {
-            "type": "ll",
-            "name": "Landline",
-            "price": 35
-        },
-        "10": {
-            "type": "tv",
-            "name": "TV2",
-            "price": 120
-        },
-        "12": {
-            "type": "bb",
-            "name": "Broadband1",
-            "price": 40
-        },
-        "14": {
-            "type": "addon",
-            "name": "AddonTV"
-        },
-        "16": {
-            "type": "bb",
-            "name": "Broadband2",
-            "price": 60
-        },
-        "18": {
-            "type": "tv",
-            "name": "TV1",
-            "price": 50
-        },
-        "21": {
-            "type": "addon",
-            "name": "AddonBB",
-            "price": 10
-        }
-    },
-    "addons": {
-        "tv": [
-            14
+    "success": true,
+    "data": {
+        "products": [
+            {
+                "id": 12,
+                "type": "bb",
+                "name": "Broadband1",
+                "description": "50 MBPs / 5 devices",
+                "price": 40
+            },
+            {
+                "id": 16,
+                "type": "bb",
+                "name": "Broadband2",
+                "description": "60 MBPs / 8 devices",
+                "price": 60
+            }
         ],
-        "bb": [
-            21
+        "bundles": [
+            {
+                "mainProduct": {
+                    "id": 16,
+                    "type": "bb",
+                    "name": "Broadband2",
+                    "description": "60 MBPs / 8 devices",
+                    "price": 60
+                },
+                "products": [
+                    {
+                        "product": {
+                            "id": 18,
+                            "type": "tv",
+                            "name": "TV1",
+                            "description": "60 HD + 2 Sports HD",
+                            "price": 50
+                        },
+                        "additional": -10
+                    },
+                    {
+                        "product": {
+                            "id": 8,
+                            "type": "ll",
+                            "name": "Landline",
+                            "description": "100 min",
+                            "price": 35
+                        },
+                        "additional": -40
+                    },
+                    {
+                        "product": {
+                            "id": 10,
+                            "type": "tv",
+                            "name": "TV2",
+                            "description": "80 HD + 4 Sports HD",
+                            "price": 120
+                        },
+                        "additional": -20
+                    },
+                    {
+                        "product": {
+                            "id": 21,
+                            "type": "addon",
+                            "name": "AddonBB",
+                            "description": "Mobile 4G 500MB",
+                            "price": 10
+                        },
+                        "additional": -10
+                    }
+                ],
+                "price": 215
+            },
+            {
+                "mainProduct": {
+                    "id": 12,
+                    "type": "bb",
+                    "name": "Broadband1",
+                    "description": "50 MBPs / 5 devices",
+                    "price": 40
+                },
+                "products": [
+                    {
+                        "product": {
+                            "id": 18,
+                            "type": "tv",
+                            "name": "TV1",
+                            "description": "60 HD + 2 Sports HD",
+                            "price": 50
+                        },
+                        "additional": -10
+                    },
+                    {
+                        "product": {
+                            "id": 8,
+                            "type": "ll",
+                            "name": "Landline",
+                            "description": "100 min",
+                            "price": 35
+                        },
+                        "additional": -40
+                    },
+                    {
+                        "product": {
+                            "id": 10,
+                            "type": "tv",
+                            "name": "TV2",
+                            "description": "80 HD + 4 Sports HD",
+                            "price": 120
+                        },
+                        "additional": -20
+                    },
+                    {
+                        "product": {
+                            "id": 21,
+                            "type": "addon",
+                            "name": "AddonBB",
+                            "description": "Mobile 4G 500MB",
+                            "price": 10
+                        },
+                        "additional": -10
+                    },
+                    {
+                        "product": {
+                            "id": 8,
+                            "type": "ll",
+                            "name": "Landline",
+                            "description": "100 min",
+                            "price": 35
+                        },
+                        "additional": -40
+                    },
+                    {
+                        "product": {
+                            "id": 21,
+                            "type": "addon",
+                            "name": "AddonBB",
+                            "description": "Mobile 4G 500MB",
+                            "price": 10
+                        },
+                        "additional": 0
+                    }
+                ],
+                "price": 260
+            }
         ]
-    },
-    "bundles": {
-        "8": {
-            "10": -30,
-            "12": -40,
-            "16": -40,
-            "18": -10
-        },
-        "10": {
-            "8": -30,
-            "14": 15,
-            "16": -20
-        },
-        "12": {
-            "8": -40,
-            "21": 0
-        },
-        "16": {
-            "8": -40,
-            "10": -20,
-            "18": -10,
-            "21": -10
-        },
-        "18": {
-            "8": -10,
-            "14": 35,
-            "16": -10
-        }
     }
 }
