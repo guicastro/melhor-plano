@@ -8,5 +8,21 @@ header {
 
 header img {
 
-    margin: 6px;
+    margin: 10px;
+}
+
+
+hr {
+    width: 100%;
+}
+
+
+footer {
+    background: linear-gradient(20deg, #18ccc0, #80deea);
+    border: 0;
+    margin: 20px 0 0 0;
+    padding: 6px;
+    color: white;
+    text-align: center;
+    font-size: 11px;
 }

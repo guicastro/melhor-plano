@@ -57,12 +57,20 @@ class BroadbandModel {
         $AllBundles = $Database->bundles;
         
         foreach($AllBundles as $keyBundle => $BundleObject) {
-
+            
             if($AllProducts[$BundleObject->mainProduct]->type == "bb") {
+
+                // echo "\n-----\nBundles BB";
+                // echo "\nBundle ".$keyBundle;                
+                // echo "\nBB ".$BundleObject->mainProduct;
                 
                 $BundleMainProduct[$keyBundle] = $AllProducts[$BundleObject->mainProduct];
+                
                 foreach($BundleObject->products as $keyProducts => $BundleProductObject) {
                     
+                    // echo "\n\nProduto ".$keyProducts;
+                    // echo "\nNome: ".$AllProducts[$BundleProductObject->product]->name;
+
                     $NewBundleProducts[] = array("product" => $AllProducts[$BundleProductObject->product], "additional" => $BundleProductObject->additional);                    
                 }
                 $BundleProducts[$keyBundle] = $NewBundleProducts;
