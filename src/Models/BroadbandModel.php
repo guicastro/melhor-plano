@@ -57,26 +57,24 @@ class BroadbandModel {
         $AllBundles = $Database->bundles;
         
         foreach($AllBundles as $keyBundle => $BundleObject) {
-            
-            if($AllProducts[$BundleObject->mainProduct]->type == "bb") {
 
-                // echo "\n-----\nBundles BB";
-                // echo "\nBundle ".$keyBundle;                
-                // echo "\nBB ".$BundleObject->mainProduct;
+            if($AllProducts[$BundleObject->mainProduct]->type == "bb") {
                 
                 $BundleMainProduct[$keyBundle] = $AllProducts[$BundleObject->mainProduct];
-                
                 foreach($BundleObject->products as $keyProducts => $BundleProductObject) {
                     
-                    // echo "\n\nProduto ".$keyProducts;
-                    // echo "\nNome: ".$AllProducts[$BundleProductObject->product]->name;
-
                     $NewBundleProducts[] = array("product" => $AllProducts[$BundleProductObject->product], "additional" => $BundleProductObject->additional);                    
                 }
                 $BundleProducts[$keyBundle] = $NewBundleProducts;
-                $Bundles[] = array("mainProduct" => $BundleMainProduct[$keyBundle], "products" => $BundleProducts[$keyBundle]);
+
+                foreach ($BundleProducts[$keyBundle] as $keyProduct => $ProductObject) {
+
+                    $BundlePrice[$keyBundle] += $ProductObject["product"]->price + $ProductObject->additonal;
+                }
+                $Bundles[] = array("mainProduct" => $BundleMainProduct[$keyBundle], "products" => $BundleProducts[$keyBundle], "price" => $BundlePrice[$keyBundle]);
             }
         }
+
 
         if( count($Broadbands)>0 || count($Bundles)>0 ) {
 

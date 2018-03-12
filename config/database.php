@@ -19,6 +19,8 @@
     
     $database["addons"][] = array("type" => "bb", "id" => 21);
     
+    $database["types"][] = array("bb", "tv", "ll");
+
     $database["bundles"][] = array("mainProduct" => 16, "products" => array(array("product" => 18, "additional" => -10),
                                                                                     array("product" => 8, "additional" => -40),
                                                                                     array("product" => 10, "additional" => -20),

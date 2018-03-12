@@ -56,11 +56,10 @@ function CreateCard(type, Cards) {
     else if(type=="bundles") {
         
         var CardsArea = $("#bundles");
-
-        var BundleNumber = 0;
-        var BundleTotal = 0;
-
+        
         $.each(Cards, function (key, BundleObject) { 
+            
+            var BundleNumber = 0;
 
             BundleNumber++;
 
@@ -71,9 +70,7 @@ function CreateCard(type, Cards) {
             var BundleList = $('<ul class="list-group list-group-flush"></ul>');
 
             $.each(BundleObject.products, function (ProductKey, ProductObject) { 
-                
-                BundleTotal += Math.round(Number(ProductObject.product.price) + Number(ProductObject.additional));
-                
+                                    
                 switch(ProductObject.product.type) {
                     
                     case "bb":
@@ -94,7 +91,7 @@ function CreateCard(type, Cards) {
             var BundlePrice = $('<div class="card-footer">\
                                     <div class="row">\
                                         <div class="col-9"><strong>Total</strong></div>\
-                                        <div class="col-3 text-right"><strong>$ '+BundleTotal+'</strong></div>\
+                                        <div class="col-3 text-right"><strong>$ '+BundleObject.price+'</strong></div>\
                                     </div>\
                                 </div>');
             

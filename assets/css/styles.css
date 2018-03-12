@@ -16,6 +16,9 @@ hr {
     width: 100%;
 }
 
+.bundle-card {
+    margin-bottom: 30px;
+}
 
 footer {
     background: linear-gradient(20deg, #18ccc0, #80deea);
